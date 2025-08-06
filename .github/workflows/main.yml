@@ -26,3 +26,14 @@ jobs:
 
     - name: Run tests
       run: npm test
+deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to production
+      run: |
+        echo "Deployment step placeholder"
+        # In a real-world scenario, you would replace the above line with commands to deploy your application.
+        # For example, using a cloud provider's CLI to push a Docker image or sync files.
+      
